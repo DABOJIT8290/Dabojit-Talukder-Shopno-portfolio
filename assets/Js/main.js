@@ -260,6 +260,15 @@
         img: "./assets/Images/p1.jpg"
         // img: 'assets/certificates/deep-learning.jpg',
       },
+
+      {
+        title: 'Deep Learning Specialization',
+        issuer: 'DeepLearning.AI · 2024',
+        // ▼▼▼ এখানে তোমার certificate এর real image path দাও ▼▼▼
+        img: "./assets/Images/p1.jpg"
+        // img: 'assets/certificates/deep-learning.jpg',
+      },
+
       {
         title: 'Dabojit IT',
         issuer: 'DeepLearning.AI · 2024',
@@ -271,14 +280,14 @@
         title: 'TensorFlow Developer',
         issuer: 'Google · 2024',
         // ▼▼▼ এখানে তোমার certificate এর real image path দাও ▼▼▼
-        img: 'ai1.jpeg'
+        img: '.assets/Images/dabo.png'
         // img: 'assets/certificates/tensorflow.jpg',
       },
       {
         title: 'AWS ML Specialty',
         issuer: 'Amazon Web Services · 2023',
         // ▼▼▼ এখানে তোমার certificate এর real image path দাও ▼▼▼
-        img: certPh('f472b6','22d3ee','AWS ML','Amazon Web Services · 2023')
+        img: "./assets/Images/ai1.jpeg"
         // img: 'assets/certificates/aws-ml.jpg',
       },
       {
