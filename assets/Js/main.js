@@ -29,7 +29,7 @@
         summary: 'A SDXL LoRA pipeline producing editorial-grade portraits in 9 brand styles.',
         description: 'A fine-tuned SDXL pipeline trained on 4,000 curated references. The system shipped with a ComfyUI-based studio interface, batched A/B grading, and automatic upscaling to 4K. We delivered 800+ on-brand portraits for a fashion launch in under two weeks.',
         // ▼▼▼ এখানে তোমার image path দাও ▼▼▼
-        cover: ph('22d3ee','a78bfa','Neural Portraits'),
+        cover: './assets/Images/ai6.png',
         // cover: 'assets/images/neural-portraits.jpg',
         tech: ['SDXL','LoRA','ComfyUI','Python','Real-ESRGAN']
       },
@@ -111,7 +111,7 @@
         summary: 'Self-healing mesh of low-power air-quality sensors for industrial sites.',
         description: 'Custom ESP32-S3 PCBs with PMS7003 + BME688 sensors, self-healing ESP-Mesh networking, and an LTE bridge. Deployed at 4 sites; battery life > 18 months. Firmware in C++ on FreeRTOS, host stack on Rust.',
         // ▼▼▼ এখানে তোমার image path দাও ▼▼▼
-        cover: 'ai1.jpeg',
+        cover: './assets/Images/ai1.jpeg',
         // cover: 'assets/images/esp-mesh.jpg',
         tech: ['ESP32-S3','KiCad','FreeRTOS','Rust']
       },
@@ -257,7 +257,7 @@
         title: 'Deep Learning Specialization',
         issuer: 'DeepLearning.AI · 2024',
         // ▼▼▼ এখানে তোমার certificate এর real image path দাও ▼▼▼
-        img: certPh('22d3ee','a78bfa','Deep Learning','DeepLearning.AI · 2024')
+        img: "./assets/Images/p1.jpg"
         // img: 'assets/certificates/deep-learning.jpg',
       },
       {
