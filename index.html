@@ -18,10 +18,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
 <!-- Bootstrap (grid / utilities only — visual theme stays custom in style.css) -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="./assets/CSS/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom theme stylesheet (এখানে সব রং বদলানো যায়) -->
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="./assets/CSS/style.css">
 </head>
 <body>
 
@@ -67,14 +67,14 @@
   SECTION: NAVBAR  → links: #home #about #projects #contact
 ============================================================ -->
 <header class="nav" id="nav">
-  <div class="nav-inner">
+  <div class="nav-inner container">
     <a href="#home" class="logo" data-jump>
       <!-- ===== HEADER LOGO IMAGE — তোমার logo PNG ===== -->
       <img src="./assets/Images/logo.png" alt="Dabojit Talukder" class="logo-img" />
   <span class="logo-text">DABOJIT <span class="theme-color">TALUKDER</span></span>
     </a>
     <nav aria-label="Primary">
-      <ul class="nav-links">
+      <ul class="nav-links m-auto">
         <li><a href="#home" data-jump>Home</a></li>
         <li><a href="#about" data-jump>About</a></li> 
         <li><a href="#projects" data-jump>Projects</a></li>
@@ -385,9 +385,9 @@
 </div>
 
 <!-- Bootstrap JS bundle (for any future bootstrap components) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/JS/bootstrap.bundle.min.js"></script>
 
 <!-- Custom site logic: cursor light, projects, certificates, modal, nav -->
-<script src="./assets/main.js"></script>
+<script src="./assets/JS/main.js"></script>
 </body>
 </html>
