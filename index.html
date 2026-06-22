@@ -1,362 +1,393 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#05070d" />
-  <meta name="description" content="Personal portfolio — AI Image, AI Video, and Electronics projects. High-performance, accessible, and beautifully animated." />
-  <title>DABOJIT TALUKDER SHOPNO</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#020403" />
+<meta name="description" content="Dabojit Talukder Shopno — AI Image, AI Video, and Electronics portfolio." />
+<title>DABOJIT TALUKDER SHOPNO</title>
 
-  <!-- ============================================================
-    FAVICON (LOGO)
-    তোমার logo file এর path দাও নিচে src এ
-    যেমন: href="my-logo.png"  অথবা  href="assets/images/logo.png"
-  ============================================================ -->
-  <link rel="icon" type="image/x-icon" href="./assets/Images/my-logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/Css/style.css">
+<!-- ============================================================
+  FAVICON (LOGO) — তোমার logo image এর path এখানে দাও
+============================================================ -->
+<link rel="icon" type="image/png" href="./assets/Images/Dabojit Logo .jpg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+<!-- Bootstrap (grid / utilities only — visual theme stays custom in style.css) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom theme stylesheet (এখানে সব রং বদলানো যায়) -->
+<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <a href="#main" class="skip">Skip to content</a>
 
-  <!-- ANIMATED CIRCUIT BACKGROUND -->
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-orb orb-a" aria-hidden="true"></div>
-  <div class="bg-orb orb-b" aria-hidden="true"></div>
-  <svg class="bg-circuit" aria-hidden="true" viewBox="0 0 1200 800" preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="cg" x1="0" x2="1">
-        <stop offset="0" stop-color="#22d3ee"/>
-        <stop offset="1" stop-color="#a78bfa"/>
-      </linearGradient>
-    </defs>
-    <g fill="none" stroke="url(#cg)" stroke-width="1.2">
-      <path d="M0,120 L240,120 L260,140 L500,140 L520,160 L900,160 L920,180 L1200,180"/>
-      <path d="M0,300 L180,300 L200,320 L420,320 L440,340 L760,340 L780,320 L1200,320"/>
-      <path d="M0,500 L160,500 L180,480 L400,480 L420,500 L700,500 L720,520 L1200,520"/>
-      <path d="M0,680 L300,680 L320,660 L640,660 L660,680 L1200,680"/>
-      <path d="M180,0 L180,120 M260,140 L260,300 L240,320 L240,500 M780,320 L780,500 M520,160 L520,340 M920,180 L920,520"/>
-    </g>
-    <g fill="#22d3ee">
-      <circle cx="180" cy="120" r="3"/>
-      <circle cx="520" cy="160" r="3"/>
-      <circle cx="780" cy="340" r="3"/>
-      <circle cx="240" cy="320" r="3"/>
-      <circle cx="920" cy="520" r="3"/>
-    </g>
-  </svg>
+<a href="#main" class="skip">Skip to content</a>
 
-  <!-- NAVBAR -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#home" class="logo" data-jump>
-        <span class="logo-mark">D</span>
-        <span>Dabojit Talukder<span style="color:var(--cyan)">.</span></span>
+<!-- ============================================================
+  CURSOR SPOTLIGHT LAYERS
+  মাউস move করলে এই দুইটা layer আলো follow করে (main.js দ্বারা চালিত)
+============================================================ -->
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- ============================================================
+  ANIMATED BACKGROUND (grid lines + glow orbs + circuit svg)
+============================================================ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb orb-a" aria-hidden="true"></div>
+<div class="bg-orb orb-b" aria-hidden="true"></div>
+<svg class="bg-circuit" aria-hidden="true" viewBox="0 0 1200 800" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="cg" x1="0" x2="1">
+      <stop offset="0" stop-color="#22ff8b"/>
+      <stop offset="1" stop-color="#0bd17a"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#cg)" stroke-width="1.2">
+    <path d="M0,120 L240,120 L260,140 L500,140 L520,160 L900,160 L920,180 L1200,180"/>
+    <path d="M0,300 L180,300 L200,320 L420,320 L440,340 L760,340 L780,320 L1200,320"/>
+    <path d="M0,500 L160,500 L180,480 L400,480 L420,500 L700,500 L720,520 L1200,520"/>
+    <path d="M0,680 L300,680 L320,660 L640,660 L660,680 L1200,680"/>
+    <path d="M180,0 L180,120 M260,140 L260,300 L240,320 L240,500 M780,320 L780,500 M520,160 L520,340 M920,180 L920,520"/>
+  </g>
+  <g fill="#22ff8b">
+    <circle cx="180" cy="120" r="3"/>
+    <circle cx="520" cy="160" r="3"/>
+    <circle cx="780" cy="340" r="3"/>
+    <circle cx="240" cy="320" r="3"/>
+    <circle cx="920" cy="520" r="3"/>
+  </g>
+</svg>
+
+<!-- ============================================================
+  SECTION: NAVBAR  → links: #home #about #projects #contact
+============================================================ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" data-jump>
+      <!-- ===== HEADER LOGO IMAGE — তোমার logo PNG ===== -->
+      <img src="./assets/Images/logo.png" alt="Dabojit Talukder" class="logo-img" />
+  <span class="logo-text">DABOJIT <span class="theme-color">TALUKDER</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#home" data-jump>Home</a></li>
+        <li><a href="#about" data-jump>About</a></li> 
+        <li><a href="#projects" data-jump>Projects</a></li>
+        <li><a href="#contact" data-jump>Contact</a></li>
+      </ul>
+    </nav>
+    <!-- CV download link -->
+    <a href="./assets/CV/DABOJIT TALUKDER CV.pdf" class="nav-cta">Download CV→</a>
+    <button class="menu-toggle" aria-label="Toggle menu" id="menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================
+    SECTION: HERO  (id="home")  — first thing visitors see
+  ============================================================ -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="reveal">
+        <span class="hero-tag"><span class="dot"></span> Available for new projects</span>
+        <h1>
+          Building at the edge of <span class="grad">AI</span> &amp; <span class="grad">Electronics</span>
+        </h1>
+        <p class="hero-sub">
+          I bridge the gap between physical hardware and intelligent software. From troubleshooting
+          complex circuit systems to engineering advanced AI prompts and creating sharp, professional
+          brand designs, I build solutions that are smart, functional, and visually compelling.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-ghost" data-jump>
+            View Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <dl class="hero-stats">
+          <div class="stat"><div class="n">1000+</div><div class="l">Projects</div></div>
+          <div class="stat"><div class="n">8y</div><div class="l">Experience</div></div>
+          <div class="stat"><div class="n">80+</div><div class="l">Clients</div></div>
+        </dl>
+      </div>
+
+      <!-- Profile photo card -->
+      <div class="profile-wrap reveal">
+        <div class="profile-ring"></div>
+        <div class="profile-frame">
+          <!-- ===== PROFILE PHOTO — তোমার ছবির path দাও ===== -->
+          <img class="profile-img" alt="DABOJIT TALUKDER SHOPNO" loading="eager"
+            src="./assets/Images/profile.jpg" />
+        </div>
+        <div class="profile-badge"><span class="dot"></span> Open to collab</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+    SECTION: ABOUT  (id="about")  — bio, skill chips, quick-facts panel
+  ============================================================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">DESIGN · TECH · SOLUTION</h2>
+        <p class="section-lead">I bridge generative AI workflows with real-world hardware — from neural image pipelines to PCB-level firmware.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p>For nearly a decade I've shipped products at the intersection of <strong>creative AI</strong> and
+          <strong>embedded systems</strong>. I lead end-to-end builds: research, prototyping, fabrication, and the
+          polish that turns a prototype into a product.</p>
+          <p>My current focus is high-fidelity AI imagery, controllable AI video, and low-power IoT modules.
+          I work with founders, agencies, and R&amp;D teams who care about craft, performance, and detail.</p>
+          <div class="skill-grid">
+            <span class="chip">Grafix Design</span>
+            <span class="chip">Electronics</span>
+            <span class="chip">Office Management</span>
+            <span class="chip">App Development</span>
+            <span class="chip">Web Development</span>
+            <span class="chip">PLC Automation</span>
+            <span class="chip">House Wiring</span>
+            <span class="chip">Poster Design</span>
+            <span class="chip">AI Video Make</span>
+            <span class="chip">Electronics Project Making</span>
+            <span class="chip">Marketing</span>
+             <span class="chip">AI</span>
+          </div>
+        </div>
+        <aside class="side-panel reveal">
+          <h3>At a glance</h3>
+          <ul class="side-list">
+            <li><strong>Location</strong><span>Chattogram, BD</span></li>
+            <li><strong>Studio since</strong><span>2025</span></li>
+            <li><strong>Languages</strong><span>EN · Bng</span></li>
+            <li><strong>Stack focus</strong><span>AI media · Embedded</span></li>
+            <li><strong>Availability</strong><span>Q3 this year</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+    SECTION: PROJECTS  (id="projects")
+    এর ভেতরে subsections: AI Image / AI Video / Electronics / App / Certificates
+  ============================================================ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">Selected work</div>
+        <h2 class="section-title">Interactive project gallery</h2>
+        <p class="section-lead">Hover any card for a quick read; tap for the full case study with images and tech stack.</p>
+      </div>
+
+      <!-- ---- SUBSECTION: AI IMAGE ---- -->
+      <div class="cat-block reveal">
+        <div class="cat-head">
+          <h3>
+            <span class="ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5-9 9"/></svg>
+            </span>
+            AI Image
+          </h3>
+          <span class="count">// 03 projects</span>
+        </div>
+        <div class="grid" data-cat="ai-image"></div>
+      </div>
+
+      <!-- ---- SUBSECTION: AI VIDEO ---- -->
+      <div class="cat-block reveal">
+        <div class="cat-head">
+          <h3>
+            <span class="ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            </span>
+            AI Video
+          </h3>
+          <span class="count">// 03 projects</span>
+        </div>
+        <div class="grid" data-cat="ai-video"></div>
+      </div>
+
+      <!-- ---- SUBSECTION: ELECTRONICS ---- -->
+      <div class="cat-block reveal">
+        <div class="cat-head">
+          <h3>
+            <span class="ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6"/></svg>
+            </span>
+            Electronics Projects
+          </h3>
+          <span class="count">// 01 project</span>
+        </div>
+        <div class="grid" data-cat="electronics"></div>
+      </div>
+
+      <!-- ---- SUBSECTION: APP DEVELOPMENT (download link) ---- -->
+      <div class="cat-block reveal">
+        <div class="cat-head">
+          <h3>
+            <span class="ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            </span>
+            App Development
+          </h3>
+          <span class="count">// tap image to download</span>
+        </div>
+        <div class="app-block">
+          <a href="downloads/app.apk" download class="app-card" aria-label="Download the app">
+            <div class="app-media">
+              <!-- ===== APP PREVIEW IMAGE ===== -->
+              <img src="./assets/Images/icon.png" alt="App preview — tap to download"/>
+              <div class="app-overlay">
+                <div class="app-cta">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Click here to download</span>
+                </div>
+              </div>
+            </div>
+            <div class="app-info">
+              <div class="card-meta"><span>Mobile App</span><span>Free</span></div>
+              <h4>Creator Toolkit</h4>
+              <p>An on-device AI toolkit for creators. Capture, prompt, generate, and publish — entirely from your phone. Lightweight, offline-first, with cloud sync.</p>
+              <div class="card-tech" style="opacity:1;max-height:none;margin-top:14px">
+                <span>React Native</span><span>Expo</span><span>TensorFlow Lite</span><span>WatermelonDB</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ---- SUBSECTION: CERTIFICATES ---- -->
+      <div class="cat-block reveal">
+        <div class="cat-head">
+          <h3>
+            <span class="ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+            </span>
+            Certificates
+          </h3>
+          <span class="count">// click to zoom</span>
+        </div>
+        <div class="cert-grid" id="cert-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+    SECTION: CONTACT  (id="contact")  — email/phone/whatsapp/linkedin + CTA
+  ============================================================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title">Bringing Ideas to Life, From Circuit to Pixel.</h2>
+        <p class="section-lead">Drop a message via any channel — I read everything and reply within a working day.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:dabojittalukder8290shopno@gmail.com" class="contact-card reveal">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+          </div>
+          <div class="label">Email</div>
+          <div class="val">dabojittalukder8290shopno@gmail.com</div>
+        </a>
+        <a href="tel:+8801894798290" class="contact-card reveal">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 13 13 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 13 13 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="label">Phone</div>
+          <div class="val">+880 189479-8290</div>
+        </a>
+        <a href="https://wa.me/8801894798290" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div class="label">WhatsApp</div>
+          <div class="val">+880 189479-8290</div>
+        </a>
+        <a href="https://www.linkedin.com/in/dabojit-talukder-shopno-430a05267" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="label">LinkedIn</div>
+          <div class="val">Dabojit Talukder Shopno</div>
+        </a>
+      </div>
+
+      <div class="send-banner reveal">
+        <h3>Have a project in mind?</h3>
+        <p>Whether it's a generative AI pipeline, a cinematic AI video, or a hardware prototype — I'd love to hear about it.</p>
+        <a href="https://www.facebook.com/LEODABOJITDTS" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+          Send Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+  SECTION: FOOTER  — copyright + social icon links
+============================================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copy">© <span id="yr"></span> Create by Dabojit</div>
+    <div class="socials">
+      <a href="https://github.com/DABOJIT8290" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
       </a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="#home" data-jump>Home</a></li>
-          <li><a href="#about" data-jump>About</a></li>
-          <li><a href="#projects" data-jump>Projects</a></li>
-          <li><a href="#contact" data-jump>Contact</a></li>
-        </ul>
-      </nav>
-      <a href="./assets/CV/DABOJIT TALUKDER CV.pdf" class="nav-cta">Download CV&rarr;</a>
-      <button class="menu-toggle" aria-label="Toggle menu" id="menu-toggle">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="reveal">
-          <span class="hero-tag"><span class="dot"></span> Available for new projects</span>
-          <h1>
-            Building at the edge of <span class="grad">AI</span> &amp; <span class="grad">Electronics</span>
-          </h1>
-          <p class="hero-sub">
-            I bridge the gap between physical hardware and intelligent software. From troubleshooting complex circuit systems to engineering advanced AI prompts and creating sharp, professional brand designs, I build solutions that are smart, functional, and visually compelling.
-          </p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-ghost" data-jump>
-              View Projects
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-          <dl class="hero-stats">
-            <div class="stat"><div class="n">1000+</div><div class="l">Projects</div></div>
-            <div class="stat"><div class="n">8y</div><div class="l">Experience</div></div>
-            <div class="stat"><div class="n">80+</div><div class="l">Clients</div></div>
-          </dl>
-        </div>
-
-        <div class="profile-wrap reveal">
-          <div class="profile-ring"></div>
-          <div class="profile-frame">
-            <!-- ============================================================
-              PROFILE PHOTO
-              তোমার নিজের ছবির path দাও src এ।
-              যেমন: src="assets/images/my.jpg"
-                অথবা: src="my-photo.jpg"   (যদি একই folder এ থাকে)
-            ============================================================ -->
-            <img class="profile-img" alt="DABOJIT TALUKDER SHOPNO" loading="eager"
-              src="./assets/Images/profile.jpg" />
-          </div>
-          <div class="profile-badge"><span class="dot"></span> Open to collab</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="reveal">
-          <div class="eyebrow">About</div>
-          <h2 class="section-title">DESIGN · TEC · SOLUTION</h2>
-          <p class="section-lead">I bridge generative AI workflows with real-world hardware — from neural image pipelines to PCB-level firmware.</p>
-        </div>
-        <div class="about-grid">
-          <div class="about-body reveal">
-            <p>For nearly a decade I've shipped products at the intersection of <strong>creative AI</strong> and
-            <strong>embedded systems</strong>. I lead end-to-end builds: research, prototyping, fabrication, and the
-            polish that turns a prototype into a product.</p>
-            <p>My current focus is high-fidelity AI imagery, controllable AI video, and low-power IoT modules.
-            I work with founders, agencies, and R&amp;D teams who care about craft, performance, and detail.</p>
-            <div class="skill-grid">
-              <span class="chip">Grafix Design</span>
-              <span class="chip">Electronics</span>
-              <span class="chip">Office Management</span>
-              <span class="chip">App Development</span>
-              <span class="chip">Web Development</span>
-              <span class="chip">PLC Automation</span>
-              <span class="chip">House Wiring</span>
-              <span class="chip">Electronics Project Making</span>
-              <span class="chip">AI</span>
-              <span class="chip">AI Video Make</span>
-              <span class="chip">Poster Design</span>
-              <span class="chip">Marketing</span>
-            </div>
-          </div>
-          <aside class="side-panel reveal">
-            <h3>At a glance</h3>
-            <ul class="side-list">
-              <li><strong>Location</strong><span></span></li>
-              <li><strong>Studio since</strong><span>2025</span></li>
-              <li><strong>Languages</strong><span>EN · Bng</span></li>
-              <li><strong>Stack focus</strong><span>AI media · Embedded</span></li>
-              <li><strong>Availability</strong><span>Q3 In year</span></li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="reveal">
-          <div class="eyebrow">Selected work</div>
-          <h2 class="section-title">Interactive project gallery</h2>
-          <p class="section-lead">Hover any card for a quick read; tap for the full case study with images and tech stack.</p>
-        </div>
-
-        <!-- AI IMAGE -->
-        <div class="cat-block reveal">
-          <div class="cat-head">
-            <h3>
-              <span class="ico">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5-9 9"/></svg>
-              </span>
-              AI Image
-            </h3>
-            <span class="count">// 03 projects</span>
-          </div>
-          <div class="grid" data-cat="ai-image"></div>
-        </div>
-
-        <!-- AI VIDEO -->
-        <div class="cat-block reveal">
-          <div class="cat-head">
-            <h3>
-              <span class="ico">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-              </span>
-              AI Video
-            </h3>
-            <span class="count">// 03 projects</span>
-          </div>
-          <div class="grid" data-cat="ai-video"></div>
-        </div>
-
-        <!-- ELECTRONICS -->
-        <div class="cat-block reveal">
-          <div class="cat-head">
-            <h3>
-              <span class="ico">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/><rect x="9" y="9" width="6" height="6"/></svg>
-              </span>
-              Electronics Projects
-            </h3>
-            <span class="count">// 01 project</span>
-          </div>
-          <div class="grid" data-cat="electronics"></div>
-        </div>
-
-        <!-- APP DEVELOPMENT -->
-        <div class="cat-block reveal">
-          <div class="cat-head">
-            <h3>
-              <span class="ico">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>
-              </span>
-              App Development
-            </h3>
-            <span class="count">// tap image to download</span>
-          </div>
-          <div class="app-block">
-            <a href="downloads/app.apk" download class="app-card" aria-label="Download the app">
-              <div class="app-media">
-                <!-- ============================================================
-                  APP PREVIEW IMAGE (প্রথম app card)
-                  তোমার app এর screenshot বা preview image এর path দাও।
-                  যেমন: src="assets/images/app-preview.jpg"
-                ============================================================ -->
-                <img src="./assets/Images/icon.png" alt="App preview — tap to download"/>
-                <div class="app-overlay">
-                  <div class="app-cta">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    <span>Click here to download</span>
-                  </div>
-                </div>
-              </div>
-              <div class="app-info">
-                <div class="card-meta"><span>Mobile App</span><span>v1.0.0</span></div>
-                <h4>Cost</h4>
-                <p>An on-device AI toolkit for creators. Capture, prompt, generate, and publish — entirely from your phone. Lightweight, offline-first, with cloud sync.</p>
-                <div class="card-tech" style="opacity:1;max-height:none;margin-top:14px">
-                  <span>React Native</span><span>Expo</span><span>TensorFlow Lite</span><span>WatermelonDB</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- CERTIFICATES -->
-        <div class="cat-block reveal">
-          <div class="cat-head">
-            <h3>
-              <span class="ico">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
-              </span>
-              Certificates
-            </h3>
-            <span class="count">// click to zoom</span>
-          </div>
-          <div class="cert-grid" id="cert-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="reveal">
-          <div class="eyebrow">Contact</div>
-          <h2 class="section-title">Let's build something rare</h2>
-          <p class="section-lead">Drop a message via any channel — I read everything and reply within a working day.</p>
-        </div>
-
-        <div class="contact-grid">
-          <a href="mailto:your@email.com" class="contact-card reveal">
-            <div class="contact-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
-            </div>
-            <div class="label">Email</div>
-            <div class="val">your@email.com</div>
-          </a>
-          <a href="tel:+4915123456789" class="contact-card reveal">
-            <div class="contact-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 13 13 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 13 13 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div class="label">Phone</div>
-            <div class="val">+49 151 234 567 89</div>
-          </a>
-          <a href="https://wa.me/4915123456789" target="_blank" rel="noopener" class="contact-card reveal">
-            <div class="contact-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </div>
-            <div class="label">WhatsApp</div>
-            <div class="val">+49 151 234 567 89</div>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-card reveal">
-            <div class="contact-ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <div class="label">LinkedIn</div>
-            <div class="val">/in/alexrivera</div>
-          </a>
-        </div>
-
-        <div class="send-banner reveal">
-          <h3>Have a project in mind?</h3>
-          <p>Whether it's a generative AI pipeline, a cinematic AI video, or a hardware prototype — I'd love to hear about it.</p>
-          <a href="mailto:your@email.com" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-            Send Me
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="copy">© <span id="yr"></span> Alex Rivera · Crafted with care</div>
-      <div class="socials">
-        <a href="https://github.com/DABOJIT8290" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-1.4-.5-2.3-1.7-2.3-1 0-1.5.6-1.7 1.3v6.6h-3V8h3v1.3a3.2 3.2 0 0 1 2.9-1.6c2.1 0 3.5 1.4 3.5 4.3V19z"/></svg>
-        </a>
-        <a href="https://x.com" target="_blank" rel="noopener" aria-label="X">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-6 7H2l8-9L2 2h6l4 6 6-6z"/></svg>
-        </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Fackbook">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- CERT ZOOM BACKDROP -->
-  <div class="cert-backdrop" id="cert-backdrop" aria-hidden="true"></div>
-
-  <!-- CASE STUDY MODAL -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-    <div class="modal-scrim" data-close></div>
-    <div class="modal-panel" role="document">
-      <button class="modal-close" data-close aria-label="Close case study">&times;</button>
-      <div class="modal-body" id="modal-body"></div>
+      <a href="https://www.linkedin.com/in/dabojit-talukder-shopno-430a05267" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-1.4-.5-2.3-1.7-2.3-1 0-1.5.6-1.7 1.3v6.6h-3V8h3v1.3a3.2 3.2 0 0 1 2.9-1.6c2.1 0 3.5 1.4 3.5 4.3V19z"/></svg>
+      </a>
+      <a href="https://x.com/DABOJITDTS" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-6 7H2l8-9L2 2h6l4 6 6-6z"/></svg>
+      </a>
+      <a href="https://facebook.com/LEODABOJITDTS" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/dabojit_shopno/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
     </div>
   </div>
+</footer>
 
-  <!-- js Link -->
-  <script src="./assets/Js/main.js"></script>
+<!-- Certificate zoom backdrop -->
+<div class="cert-backdrop" id="cert-backdrop" aria-hidden="true"></div>
+
+<!-- Project / certificate case-study modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal-scrim" data-close></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" data-close aria-label="Close case study">&times;</button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Bootstrap JS bundle (for any future bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom site logic: cursor light, projects, certificates, modal, nav -->
+<script src="./assets/main.js"></script>
 </body>
 </html>
