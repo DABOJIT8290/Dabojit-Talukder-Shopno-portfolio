@@ -69,7 +69,7 @@ const projects = [
     role: 'Lead Engineer',
     summary: 'Custom diffusion model + prompt graph that locks visual identity across campaigns.',
     description: 'We trained a brand-specific diffusion model with strict colour, lighting, and composition tokens, then built a node-based prompt graph so the marketing team could ship hundreds of on-brand images without an AI specialist in the loop.',
-    cover: './assets/Images/ai2.jpeg',
+    cover: './assets/Images/Daraz.png',
     tech: ['Diffusers','ControlNet','React','FastAPI']
   },
   {
@@ -239,6 +239,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 /* ---------- INIT PROJECTS ---------- */
 renderProjects();
 
+
 /* ================================================================
    CERTIFICATES DATA + RENDER + ZOOM-ON-CLICK
    প্রতিটা certificate এর "img" এ তোমার নিজের certificate image path বসাও।
@@ -296,3 +297,106 @@ document.addEventListener('keydown', (e) => {
 });
 
 renderCertificates();
+
+/* ================================================================
+   YOUTUBE VIDEOS SECTION
+   এখানে তোমার YouTube video গুলো add করো।
+
+   প্রতিটা video তে:
+   - id      : YouTube video URL থেকে নাও। যেমন:
+               https://www.youtube.com/watch?v=dQw4w9WgXcQ
+               এখানে id হবে:  'dQw4w9WgXcQ'
+   - title   : Video এর নাম
+   - label   : Category / tag (যেমন: 'Tutorial', 'AI Demo')
+   - year    : বছর
+
+   Thumbnail automatically YouTube থেকে আসবে।
+   Click করলে সরাসরি YouTube এ যাবে।
+================================================================ */
+const ytVideos = [
+  {
+    id: 'rm__ZFOHwKs',          // ← তোমার YouTube video ID দাও
+    title: 'AI Image Generation Tutorial',
+    label: 'AI IMAGE',
+    year: 2025
+  },
+  {
+    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    title: 'Cinematic AI Video Demo',
+    label: 'AI VIDEO',
+    year: 2025
+  },
+  {
+    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    title: 'Electronics Project Showcase',
+    label: 'ELECTRONICS',
+    year: 2024
+  },
+  {
+    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    title: 'Brand Design Process',
+    label: 'DESIGN',
+    year: 2025
+  },
+  {
+    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    title: 'PLC Automation Demo',
+    label: 'PLC',
+    year: 2024
+  },
+  {
+    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    title: 'App Development Walkthrough',
+    label: 'APP DEV',
+    year: 2025
+  }
+];
+
+function renderYTVideos() {
+  const grid = document.getElementById('yt-grid');
+  if (!grid) return;
+
+  ytVideos.forEach(v => {
+    const thumbUrl = `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`;
+    const ytUrl    = `https://www.youtube.com/watch?v=${v.id}`;
+
+    const card = document.createElement('a');
+    card.className = 'yt-card';
+    card.href = ytUrl;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.setAttribute('aria-label', `Watch: ${v.title} on YouTube`);
+
+    card.innerHTML = `
+      <img class="yt-thumb" src="${thumbUrl}" alt="${v.title} thumbnail"
+           loading="lazy" decoding="async"
+           onerror="this.src='https://img.youtube.com/vi/${v.id}/hqdefault.jpg'"/>
+      <div class="yt-overlay"></div>
+
+      <div class="yt-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.1.7 11.2v2c0 2.1.3 4.2.3 4.2s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.4 21.5 12 21.5 12 21.5s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.1.3-4.2v-2C23.3 9.1 23 7 23 7zm-13.5 8.5V8.5l6.5 3.5-6.5 3.5z"/>
+        </svg>
+        YouTube
+      </div>
+
+      <div class="yt-play">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+
+      <div class="yt-info">
+        <div class="yt-meta">
+          <span>${v.label}</span>
+          <span>${v.year}</span>
+        </div>
+        <p class="yt-title">${v.title}</p>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+renderYTVideos();
