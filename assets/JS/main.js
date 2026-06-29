@@ -51,37 +51,37 @@
 const projects = [
   // ---- AI IMAGE PROJECTS ----
   {
-    id: 'neural-portraits',
+    id: 'Profile-Detais',
     cat: 'ai-image',
-    title: 'Neural Portraits',
-    year: 2025,
-    role: 'AI Director',
-    summary: 'A SDXL LoRA pipeline producing editorial-grade portraits in 9 brand styles.',
-    description: 'A fine-tuned SDXL pipeline trained on 4,000 curated references. The system shipped with a ComfyUI-based studio interface, batched A/B grading, and automatic upscaling to 4K.',
-    cover: './assets/Images/ai6.png',
-    tech: ['SDXL','LoRA','ComfyUI','Python','Real-ESRGAN']
+    title: 'Profile-Detais',
+    year: 2026,
+    role: 'All In one Frame',
+    summary: 'Passionate about electronics, technology, and creative design. Building innovative solutions that create lasting impact.',
+    description: 'Passionate Electronics Engineer, Tech Enthusiast, and Creative Designer dedicated to building innovative solutions, creating impactful digital experiences, and shaping the future through technology.This is an eye-catching e-commerce promotional banner designed primarily for a "Smart Electronics Sale" and an "Eid Dhamaka Offer."',
+    cover: './assets/Images/MY Banner.png',
+    tech: ['Claude AI','Arena AI','Gemine AI','Chat gpt']
   },
   {
-    id: 'brand-archetypes',
+    id: 'brand promotion',
     cat: 'ai-image',
-    title: 'Brand Archetypes',
-    year: 2025,
-    role: 'Lead Engineer',
-    summary: 'Custom diffusion model + prompt graph that locks visual identity across campaigns.',
-    description: 'We trained a brand-specific diffusion model with strict colour, lighting, and composition tokens, then built a node-based prompt graph so the marketing team could ship hundreds of on-brand images without an AI specialist in the loop.',
-    cover: './assets/Images/Daraz.png',
-    tech: ['Diffusers','ControlNet','React','FastAPI']
+    title: 'Brand Promotion',
+    year: 2026,
+    role: 'Daraz',
+    summary: 'Discover unbeatable deals on your favorite products. From electronics to everyday essentials, enjoy quality, convenience, secure payments, and fast delivery, all in one place.',
+    description: 'Discover everything you need in one place. Shop from a wide range of electronics, groceries, fashion, beauty, home & kitchen essentials, and more. Enjoy genuine products, amazing deals, secure payments, easy returns, and fast delivery. Start shopping today and save more with every order!',
+    cover: './assets/Images/Daraz Poster.png',
+    tech: ['Chat gpt','Gemine AI','Flow','Arena AI']
   },
   {
-    id: 'editorial-grader',
+    id: 'Elactronics-Product',
     cat: 'ai-image',
-    title: 'Editorial Grader',
-    year: 2024,
-    role: 'Tooling',
-    summary: 'Automated grading tool that scores generations against an art-direction rubric.',
-    description: 'A CLIP + vision-language scoring rig that scores raw generations against a written art-direction rubric, surfaces winners, and writes back caption metadata.',
-    cover: './assets/Images/ai1.jpeg',
-    tech: ['CLIP','GPT-4o','Node','SQLite']
+    title: 'Elactronics-Product',
+    year: 2026,
+    role: 'Elactronics',
+    summary: 'This is an eye-catching e-commerce promotional banner designed primarily for a "Smart Electronics Sale" and an "Eid Dhamaka Offer."',
+    description: 'Upgrade your everyday tech with premium electronic accessories at unbeatable prices. Shop power banks, earbuds, headphones, chargers, and more with fast delivery and trusted quality."',
+    cover: './assets/Images/Elactronics.png',
+    tech: ['Flow','AI studio','Chat gpt','Arena AI']
   },
 
   // ---- AI VIDEO PROJECTS ----
@@ -315,41 +315,41 @@ renderCertificates();
 ================================================================ */
 const ytVideos = [
   {
+    id: 'ipBkl91RwKk',          // ← তোমার YouTube video ID দাও
+    title: 'Ads with AI',
+    label: 'AI ads',
+    year: 2026
+  },
+  {
     id: 'rm__ZFOHwKs',          // ← তোমার YouTube video ID দাও
-    title: 'AI Image Generation Tutorial',
-    label: 'AI IMAGE',
-    year: 2025
+    title: 'Logo Make with AI',
+    label: 'LOGO Ads',
+    year: 2026
   },
   {
-    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
-    title: 'Cinematic AI Video Demo',
-    label: 'AI VIDEO',
-    year: 2025
-  },
-  {
-    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    id: '',          // ← তোমার YouTube video ID দাও
     title: 'Electronics Project Showcase',
     label: 'ELECTRONICS',
-    year: 2024
+    year: 2026
   },
-  {
-    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+  /**{
+    id: '',          // ← তোমার YouTube video ID দাও
     title: 'Brand Design Process',
     label: 'DESIGN',
     year: 2025
   },
   {
-    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    id: '',          // ← তোমার YouTube video ID দাও
     title: 'PLC Automation Demo',
     label: 'PLC',
     year: 2024
   },
   {
-    id: 'dQw4w9WgXcQ',          // ← তোমার YouTube video ID দাও
+    id: '',          // ← তোমার YouTube video ID দাও
     title: 'App Development Walkthrough',
     label: 'APP DEV',
     year: 2025
-  }
+  }*/
 ];
 
 function renderYTVideos() {
