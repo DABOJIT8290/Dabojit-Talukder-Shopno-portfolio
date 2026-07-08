@@ -121,15 +121,26 @@ const projects = [
 
   // ---- ELECTRONICS PROJECTS ----
   {
-    id: 'esp-mesh-sensors',
+    id: 'Relay Alarm system',
     cat: 'electronics',
-    title: 'ESP-Mesh Sensors',
-    year: 2025,
-    role: 'Hardware + Firmware',
-    summary: 'Self-healing mesh of low-power air-quality sensors for industrial sites.',
-    description: 'Custom ESP32-S3 PCBs with PMS7003 + BME688 sensors, self-healing ESP-Mesh networking, and an LTE bridge. Deployed at 4 sites; battery life > 18 months.',
-    cover: './assets/Images/ai1.jpeg',
-    tech: ['ESP32-S3','KiCad','FreeRTOS','Rust']
+    title: 'Relay Alarm System',
+    year: 2024,
+    role: 'Relay Alarm System',
+    summary: 'A budget-friendly and efficient smart home security solution engineered to detect motion and trigger immediate alarms.',
+    description: 'Built around a compact house model, this project demonstrates a simple yet highly effective security mechanism. By integrating a motion sensor (PIR) with a relay module, the system acts instantly upon detecting any unauthorized action or trigger. Once movement is identified, it immediately sounds an alarm and activates a visual indicator to secure the premises.',
+    cover: './assets/Images/Relay Alarm security system.png',
+    tech: ['Relay','Barzer','PCB-Board','LED Warning Indicator']
+  },
+  {
+    id: 'Autometic Water pump',
+    cat: 'electronics',
+    title: 'Autometic Water Pump',
+    year: 2026,
+    role: 'Autometic Water pump',
+    summary: 'An automated irrigation project designed to optimize water management for plants using embedded electronics.',
+    description: 'This system utilizes an Arduino Uno microcontroller paired with a soil moisture sensor to continuously monitor the dryness level of the soil. When the moisture drops below a specific threshold, the controller automatically triggers a relay module to activate the mini water pump, ensuring the plant receives the exact amount of water it needs without manual intervention.',
+    cover: './assets/Images/Autometic Water pump.png',
+    tech: ['Arduino Uno','Soil Moisture Sensor','Relay module','Submersible Mini Water Pump','DC Power Source']
   }
 ];
 
@@ -245,15 +256,12 @@ renderProjects();
    প্রতিটা certificate এর "img" এ তোমার নিজের certificate image path বসাও।
 ================================================================ */
 const certificates = [
-  { title:'Deep Learning Specialization', issuer:'DeepLearning.AI · 2024', img:'./assets/Images/p1.jpg' },
-  { title:'AI Fundamentals',              issuer:'DeepLearning.AI · 2024', img:'./assets/Images/p1.jpg' },
-  { title:'Dabojit IT',                   issuer:'Internal · 2024',        img:'./assets/Images/ai1.jpeg' },
-  { title:'TensorFlow Developer',         issuer:'Google · 2024',          img:'./assets/Images/ai2.jpeg' },
-  { title:'AWS ML Specialty',             issuer:'Amazon Web Services · 2023', img:'./assets/Images/ai1.jpeg' },
-  { title:'Embedded Systems',             issuer:'University of Colorado · 2023', img:'./assets/Images/ai3.jpeg' },
-  { title:'Generative AI with LLMs',      issuer:'DeepLearning.AI · 2024', img:'./assets/Images/ai4.jpeg' },
-  { title:'IoT Architecture',             issuer:'Cisco Networking Academy · 2023', img:'./assets/Images/ai5.jpeg' }
-];
+  { title:'Consumer Electronics', issuer:'NTVQF level-1 · 2022', img:'./assets/Images/Consumer Electronics.png' },
+  { title:'Office Management-Graphic-Computer Hardware',              issuer:'National youth Development Computer Training Academy · 2022', img:'./assets/Images/Office Management-Graphic-Computer Hardware.png' },
+  { title:'Esine',                   issuer:'Industrial Training · 2022',        img:'./assets/Images/Esine.png' },
+  { title:'PLC',         issuer:'BKTTC · 2025',          img:'./assets/Images/' },
+  { title:'PLC',             issuer:'Factorial  · 2026', img:'./assets/Images/' },
+]
 
 function renderCertificates(){
   const grid = document.getElementById('cert-grid');
@@ -297,6 +305,38 @@ document.addEventListener('keydown', (e) => {
 });
 
 renderCertificates();
+
+
+/* ================================================================
+   LEADERSHIP DATA + RENDER
+   এটা Certificates থেকে আলাদা একটা section — একই design/style,
+   শুধু নাম আর card গুলো আলাদা। প্রতিটা item এর "img" এ তোমার নিজের
+   leadership certificate/award image path বসাও।
+================================================================ */
+const leadershipCertificates = [
+  { title:'Leadership', issuer:'LEO  · 2023', img:'./assets/Images/LEO 1.png' },
+  { title:'Leadership', issuer:'LEO · 2024', img:'./assets/Images/LEO 2.png' },
+  
+];
+
+function renderLeadership(){
+  const grid = document.getElementById('leadership-grid');
+  if(!grid) return;
+  leadershipCertificates.forEach((c, i) => {
+    const fig = document.createElement('figure');
+    fig.className = 'cert';
+    fig.setAttribute('tabindex','0');
+    fig.setAttribute('role','button');
+    fig.setAttribute('aria-label', `${c.title} — click to zoom`);
+    fig.innerHTML = `
+      <img src="${c.img}" alt="${c.title} certificate" loading="lazy" decoding="async"/>
+      <figcaption class="cap"><span>${c.title}</span><span>0${i+1}</span></figcaption>`;
+    grid.appendChild(fig);
+  });
+}
+
+renderLeadership();
+
 
 /* ================================================================
    YOUTUBE VIDEOS SECTION
