@@ -64,20 +64,26 @@
 </svg>
 
 <!-- ============================================================
-  SECTION: NAVBAR  → links: #home #about #projects #contact
+  SECTION: NAVBAR  → links: #home #about #projects #certificate #gallery #leadership #contact
 ============================================================ -->
 <header class="nav" id="nav">
   <div class="nav-inner container">
     <a href="#home" class="logo" data-jump>
       <!-- ===== HEADER LOGO IMAGE — তোমার logo PNG ===== -->
       <img src="./assets/Images/logo.png" alt="Dabojit Talukder" class="logo-img" />
-  <span class="logo-text">DABOJIT <span class="theme-color">TALUKDER</span></span>
+      <span class="logo-text">DABOJIT <span class="theme-color">TALUKDER</span></span>
     </a>
     <nav aria-label="Primary">
       <ul class="nav-links m-auto">
         <li><a href="#home" data-jump>Home</a></li>
-        <li><a href="#about" data-jump>About</a></li> 
-        <li><a href="#projects" data-jump>Projects</a></li>
+        <li><a href="#about" data-jump>About</a></li>
+        <li><a href="#ai-image-section" data-jump>Image</a></li>
+        <li><a href="#youtube-section" data-jump>Video</a></li>
+        <li><a href="#electronics-section" data-jump>Electronics</a></li>
+        <li><a href="#app-development-section" data-jump>App</a></li>
+        <li><a href="#certificate-section" data-jump>Certificate</a></li>
+        <li><a href="#leadership-section" data-jump>Leadership</a></li>
+        <li><a href="#gallery-section" data-jump>Gallery</a></li>
         <li><a href="#contact" data-jump>Contact</a></li>
       </ul>
     </nav>
@@ -88,8 +94,6 @@
     </button>
   </div>
 </header>
-
-<main id="main">
 
   <!-- ============================================================
     SECTION: HERO  (id="home")  — first thing visitors see
@@ -195,18 +199,19 @@
       </div>
 
       <!-- ---- SUBSECTION: AI IMAGE ---- -->
-      <div class="cat-block reveal">
-        <div class="cat-head">
-          <h3>
-            <span class="ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5-9 9"/></svg>
-            </span>
-            AI Image
-          </h3>
-          <span class="count">// 03 projects</span>
-        </div>
-        <div class="grid" data-cat="ai-image"></div>
-      </div>
+      <!-- এই লাইনে id="gallery-section" যুক্ত করুন -->
+<div class="cat-block reveal" id="ai-image-section">
+  <div class="cat-head">
+    <h3>
+      <span class="ico">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5-9 9"/></svg>
+      </span>
+      AI Image Gallery
+    </h3>
+    <span class="count">// 03 projects</span>
+  </div>
+  <div class="grid" data-cat="ai-image"></div>
+</div>
      
       <!-- ============================================================
   SUBSECTION: YOUTUBE VIDEOS
@@ -248,7 +253,7 @@
       
   
       <!-- ---- SUBSECTION: ELECTRONICS ---- -->
-      <div class="cat-block reveal">
+      <div class="cat-block reveal" id="electronics-section">
         <div class="cat-head">
           <h3>
             <span class="ico">
@@ -262,7 +267,7 @@
       </div>
 
       <!-- ---- SUBSECTION: APP DEVELOPMENT (download link) ---- -->
-      <div class="cat-block reveal">
+      <div class="cat-block reveal" id="app-development-section">
         <div class="cat-head">
           <h3>
             <span class="ico">
@@ -297,36 +302,49 @@
       </div>
 
       <!-- ---- SUBSECTION: CERTIFICATES ---- -->
-      <div class="cat-block reveal">
-        <div class="cat-head">
-          <h3>
-            <span class="ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
-            </span>
-            Certificates
-          </h3>
-          <span class="count">// click to zoom</span>
-        </div>
-        <div class="cert-grid" id="cert-grid"></div>
-      </div>
+<!-- এই লাইনে id="certificate-section" যুক্ত করুন -->
+<div class="cat-block reveal" id="certificate-section">
+  <div class="cat-head">
+    <h3>
+      <span class="ico">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+      </span>
+      Certificates
+    </h3>
+    <span class="count">// click to zoom</span>
+  </div>
+  <div class="cert-grid" id="cert-grid"></div>
+</div>
 
-      <!-- ---- SUBSECTION: LEADERSHIP ---- -->
-      <div class="cat-block reveal">
-        <div class="cat-head">
-          <h3>
-            <span class="ico">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
-            </span>
-            Leadership
-          </h3>
-          <span class="count">// click to zoom</span>
-        </div>
-        <div class="cert-grid" id="leadership-grid"></div>
-      </div>
-    </div>
-  </section>
+     <!-- ---- SUBSECTION: LEADERSHIP ---- -->
+<!-- এই লাইনে id="leadership-section" যুক্ত করুন -->
+<div class="cat-block reveal" id="leadership-section">
+  <div class="cat-head">
+    <h3>
+      <span class="ico">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>
+      </span>
+      Leadership
+    </h3>
+    <span class="count">// click to zoom</span>
+  </div>
+  <div class="cert-grid" id="leadership-grid"></div>
+</div>
 
-  <div class="divider"></div>
+<!-- ---- SUBSECTION: GALLERY ---- -->
+<div class="cat-block reveal" id="gallery-section">
+  <div class="cat-head">
+    <h3>
+      <span class="ico">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5-9 9"/></svg>
+      </span>
+      Gallery
+    </h3>
+    <span class="count">// click to zoom</span>
+  </div>
+  <div class="cert-grid" id="gallery-grid"></div>
+</div>
+  
 
   <!-- ============================================================
     SECTION: CONTACT  (id="contact")  — email/phone/whatsapp/linkedin + CTA
@@ -371,13 +389,59 @@
       </div>
 
       <div class="send-banner reveal">
-        <h3>Have a project in mind?</h3>
-        <p>Whether it's a generative AI pipeline, a cinematic AI video, or a hardware prototype — I'd love to hear about it.</p>
-        <a href="https://www.facebook.com/LEODABOJITDTS" class="btn btn-primary" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-          Send Me
-        </a>
-      </div>
+
+  <!-- Cute panda -->
+  <div class="panda-wrap" aria-hidden="true">
+    <svg id="panda" class="panda" viewBox="0 0 220 210" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="55"  cy="55" r="22" fill="#1a1a1a"/>
+      <circle cx="165" cy="55" r="22" fill="#1a1a1a"/>
+      <circle cx="55"  cy="55" r="10" fill="#2b2b2b"/>
+      <circle cx="165" cy="55" r="10" fill="#2b2b2b"/>
+      <ellipse cx="110" cy="105" rx="72" ry="65" fill="#ffffff" stroke="#e6e6e6" stroke-width="2"/>
+      <ellipse cx="82"  cy="105" rx="16" ry="20" fill="#1a1a1a" transform="rotate(-15 82 105)"/>
+      <ellipse cx="138" cy="105" rx="16" ry="20" fill="#1a1a1a" transform="rotate(15 138 105)"/>
+      <circle cx="82"  cy="108" r="5" fill="#fff"/>
+      <circle cx="138" cy="108" r="5" fill="#fff"/>
+      <circle cx="82"  cy="109" r="2.5" fill="#111"/>
+      <circle cx="138" cy="109" r="2.5" fill="#111"/>
+      <ellipse cx="110" cy="130" rx="6" ry="4" fill="#1a1a1a"/>
+      <path d="M104 140 Q110 146 116 140" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="70"  cy="135" r="6" fill="#ffb7c8" opacity="0.75"/>
+      <circle cx="150" cy="135" r="6" fill="#ffb7c8" opacity="0.75"/>
+      <g class="paw paw-left">
+        <ellipse cx="55" cy="190" rx="22" ry="17" fill="#1a1a1a"/>
+        <ellipse cx="55" cy="188" rx="13" ry="10" fill="#3a3a3a"/>
+        <circle cx="47" cy="181" r="2.4" fill="#3a3a3a"/>
+        <circle cx="55" cy="179" r="2.4" fill="#3a3a3a"/>
+        <circle cx="63" cy="181" r="2.4" fill="#3a3a3a"/>
+      </g>
+      <g class="paw paw-right">
+        <ellipse cx="165" cy="190" rx="22" ry="17" fill="#1a1a1a"/>
+        <ellipse cx="165" cy="188" rx="13" ry="10" fill="#3a3a3a"/>
+        <circle cx="157" cy="181" r="2.4" fill="#3a3a3a"/>
+        <circle cx="165" cy="179" r="2.4" fill="#3a3a3a"/>
+        <circle cx="173" cy="181" r="2.4" fill="#3a3a3a"/>
+      </g>
+    </svg>
+  </div>
+
+  <h3>Have a project in mind?</h3>
+  <p>Whether it's a generative AI pipeline, a cinematic AI video, or a hardware prototype — I'd love to hear about it.</p>
+
+  <form id="contactForm" class="contact-form" autocomplete="off" novalidate>
+    <div class="row">
+      <input type="text"  id="cf-name"  name="name"  placeholder="Your name"  required />
+      <input type="email" id="cf-email" name="email" placeholder="Your email" required />
+    </div>
+    <textarea id="cf-message" name="message" rows="4" placeholder="Type your message..." required></textarea>
+
+    <button type="submit" class="btn btn-primary">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.48 0 .16 5.32.16 11.86c0 2.09.55 4.13 1.6 5.93L0 24l6.35-1.66a11.85 11.85 0 0 0 5.67 1.44h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.37-8.44zM12.03 21.3h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.77.99 1.01-3.67-.22-.38a9.42 9.42 0 0 1-1.44-5.01c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.98 6.67 2.77a9.36 9.36 0 0 1 2.77 6.67c0 5.2-4.24 9.44-9.45 9.44zm5.18-7.07c-.28-.14-1.68-.83-1.94-.93-.26-.09-.45-.14-.63.14-.19.28-.72.93-.88 1.12-.16.19-.32.21-.6.07-.28-.14-1.19-.44-2.27-1.4-.84-.75-1.41-1.68-1.57-1.96-.16-.28-.02-.44.12-.58.13-.13.28-.32.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.23-.55-.46-.48-.63-.49l-.54-.01c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.35 0 1.39 1.01 2.73 1.15 2.92.14.19 1.99 3.04 4.83 4.26.67.29 1.2.46 1.61.59.68.22 1.29.19 1.78.12.54-.08 1.68-.69 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.54-.33z"/></svg>
+      Send via WhatsApp
+    </button>
+    <p class="hint">Your name, email &amp; message will be sent straight to my WhatsApp chat.</p>
+  </form>
+</div>
     </div>
   </section>
 

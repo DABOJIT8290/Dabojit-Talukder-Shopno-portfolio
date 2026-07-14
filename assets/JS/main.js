@@ -220,10 +220,16 @@ document.querySelectorAll('[data-jump]').forEach(a => {
 });
 
 const nav = document.getElementById('nav');
-const sections = ['home','about','projects','contact'].map(id => document.getElementById(id));
+const sections = ['home','about','ai-image-section','youtube-section','electronics-section','app-development-section','certificate-section','leadership-section','gallery-section','contact'].map(id => document.getElementById(id));
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 30);
+
+  // পেজের একদম নিচে পৌঁছালে জোর করে Contact কে active করে দাও
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  if(atBottom){
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#contact'));
+  }
 }, {passive:true});
 const spy = new IntersectionObserver((entries) => {
   entries.forEach(en => {
@@ -337,6 +343,32 @@ function renderLeadership(){
 
 renderLeadership();
 
+/* ================================================================
+   GALLERY DATA + RENDER
+   Certificate এর মতোই style/size — শুধু নাম আর image path বদলাও।
+================================================================ */
+const galleryImages = [
+  { title:'Gallery', issuer:'2026', img:'./assets/Images/' },
+  { title:'Gallery', issuer:'2026', img:'./assets/Images/' },
+];
+
+function renderGallery(){
+  const grid = document.getElementById('gallery-grid');
+  if(!grid) return;
+  galleryImages.forEach((c, i) => {
+    const fig = document.createElement('figure');
+    fig.className = 'cert';
+    fig.setAttribute('tabindex','0');
+    fig.setAttribute('role','button');
+    fig.setAttribute('aria-label', `${c.title} — click to zoom`);
+    fig.innerHTML = `
+      <img src="${c.img}" alt="${c.title}" loading="lazy" decoding="async"/>
+      <figcaption class="cap"><span>${c.title}</span><span>0${i+1}</span></figcaption>`;
+    grid.appendChild(fig);
+  });
+}
+renderGallery();
+
 
 /* ================================================================
    YOUTUBE VIDEOS SECTION
@@ -440,3 +472,49 @@ function renderYTVideos() {
 }
 
 renderYTVideos();
+
+/* ================================================================
+   SEND-BANNER: panda covers eyes on type + WhatsApp submit
+================================================================ */
+(function sendBanner(){
+  const WHATSAPP_NUMBER = "8801894798290"; // তোমার WA নম্বর
+
+  const panda   = document.getElementById("panda");
+  const form    = document.getElementById("contactForm");
+  const nameEl  = document.getElementById("cf-name");
+  const emailEl = document.getElementById("cf-email");
+  const msgEl   = document.getElementById("cf-message");
+  if(!panda || !form) return;
+
+  let typingTimer = null;
+  function handleTyping(){
+    panda.classList.add("typing");
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => panda.classList.remove("typing"), 900);
+  }
+  [nameEl, emailEl, msgEl].forEach(el => {
+    el.addEventListener("input",   handleTyping);
+    el.addEventListener("keydown", handleTyping);
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name    = nameEl.value.trim();
+    const email   = emailEl.value.trim();
+    const message = msgEl.value.trim();
+    if(!name || !email || !message){
+      alert("Please fill in your name, email and message.");
+      return;
+    }
+    const text =
+`Hello Dabojit! I came from your website.
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener");
+  });
+})();
