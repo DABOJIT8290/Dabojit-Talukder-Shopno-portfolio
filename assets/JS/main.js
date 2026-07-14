@@ -253,6 +253,62 @@ document.getElementById('menu-toggle')?.addEventListener('click', () => nav.clas
 /* ---------- FOOTER YEAR ---------- */
 document.getElementById('yr').textContent = new Date().getFullYear();
 
+/* ================================================================
+   APPS DATA + RENDER (multi-app compact grid)
+   নতুন app add করতে চাইলে নিচের array তে একটা object বসাও
+================================================================ */
+const apps = [
+  {
+    title: 'Cost',
+    label: 'Mobile App',
+    tag: 'Free',
+    summary: 'A simple and efficient application to track your daily expenses and manage your budget effortlessly.',
+    cover: './assets/Images/icon.png',
+    file: './assets/Apps/app-release.apk'
+  },
+  {
+    title: 'Daily Routine',
+    label: 'Mobile App',
+    tag: 'Free',
+    summary: 'A smart tool to utilize your precious time effectively and make every day a success.',
+    cover: './assets/Images/icon daily routine.png',
+    file: './assets/Apps/Daily Routine/app-release.apk'
+  },
+  // পরবর্তী app এখানে যোগ করো, যেমন:
+  // {
+  //   title: 'Another App',
+  //   label: 'Mobile App',
+  //   tag: 'Free',
+  //   summary: 'Short description of the app.',
+  //   cover: './assets/Images/another-icon.png',
+  //   file: './assets/Apps/another-app.apk'
+  // },
+];
+
+function renderApps(){
+  const grid = document.getElementById('app-grid');
+  if(!grid) return;
+  apps.forEach(a => {
+    const card = document.createElement('a');
+    card.className = 'app-card-mini';
+    card.href = a.file;
+    card.setAttribute('download', '');
+    card.setAttribute('aria-label', `Download ${a.title}`);
+    card.innerHTML = `
+      <img src="${a.cover}" alt="${a.title} preview" loading="lazy" decoding="async"/>
+      <div class="dl-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </div>
+      <div class="overlay">
+        <div class="meta"><span>${a.label}</span><span>${a.tag}</span></div>
+        <h4>${a.title}</h4>
+        <p>${a.summary}</p>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+renderApps();
+
 /* ---------- INIT PROJECTS ---------- */
 renderProjects();
 
@@ -265,8 +321,8 @@ const certificates = [
   { title:'Consumer Electronics', issuer:'NTVQF level-1 · 2022', img:'./assets/Images/Consumer Electronics.png' },
   { title:'Office Management-Graphic-Computer Hardware',              issuer:'National youth Development Computer Training Academy · 2022', img:'./assets/Images/Office Management-Graphic-Computer Hardware.png' },
   { title:'Esine',                   issuer:'Industrial Training · 2022',        img:'./assets/Images/Esine.png' },
-  { title:'PLC',         issuer:'BKTTC · 2025',          img:'./assets/Images/' },
-  { title:'PLC',             issuer:'Factorial  · 2026', img:'./assets/Images/' },
+  { title:'PLC BKTTC',         issuer:'BKTTC · 2025',          img:'./assets/Images/' },
+  { title:'PLC Factorial',             issuer:'Factorial  · 2026', img:'./assets/Images/' },
 ]
 
 function renderCertificates(){
@@ -320,8 +376,8 @@ renderCertificates();
    leadership certificate/award image path বসাও।
 ================================================================ */
 const leadershipCertificates = [
-  { title:'Leadership', issuer:'LEO  · 2023', img:'./assets/Images/LEO 1.png' },
-  { title:'Leadership', issuer:'LEO · 2024', img:'./assets/Images/LEO 2.png' },
+  { title:'Leadership', issuer:'LEO  · 2023', img:'./assets/Images/LEO certificate 23.png' },
+  { title:'Leadership', issuer:'LEO · 2024', img:'./assets/Images/LEO certificate 24.png' },
   
 ];
 
@@ -348,8 +404,10 @@ renderLeadership();
    Certificate এর মতোই style/size — শুধু নাম আর image path বদলাও।
 ================================================================ */
 const galleryImages = [
-  { title:'Gallery', issuer:'2026', img:'./assets/Images/' },
-  { title:'Gallery', issuer:'2026', img:'./assets/Images/' },
+  { title:'Gallery', issuer:'2026', img:'./assets/Images/LEO price.png' },
+  { title:'Gallery', issuer:'2026', img:'./assets/Images/LEO price by Golden City.png' },
+  { title:'Gallery', issuer:'2026', img:'./assets/Images/LEO maddel.png' },
+  { title:'Gallery', issuer:'2026', img:'./assets/Images/LEO certificate and maddel.png' },
 ];
 
 function renderGallery(){
