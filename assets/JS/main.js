@@ -264,7 +264,7 @@ const apps = [
     tag: 'Free',
     summary: 'A simple and efficient application to track your daily expenses and manage your budget effortlessly.',
     cover: './assets/Images/icon.png',
-    file: './assets/Apps/app-release.apk'
+    file: './assets/Apps/app-release.apk' 
   },
   {
     title: 'Daily Routine',
@@ -272,7 +272,7 @@ const apps = [
     tag: 'Free',
     summary: 'A smart tool to utilize your precious time effectively and make every day a success.',
     cover: './assets/Images/icon daily routine.png',
-    file: './assets/Apps/Daily Routine/app-release.apk'
+    file: './assets/Apps/Daily Routine Traker.apk'
   },
   // পরবর্তী app এখানে যোগ করো, যেমন:
   // {
@@ -322,7 +322,7 @@ const certificates = [
   { title:'Office Management-Graphic-Computer Hardware',              issuer:'National youth Development Computer Training Academy · 2022', img:'./assets/Images/Office Management-Graphic-Computer Hardware.png' },
   { title:'Esine',                   issuer:'Industrial Training · 2022',        img:'./assets/Images/Esine.png' },
   { title:'PLC BKTTC',         issuer:'BKTTC · 2025',          img:'./assets/Images/' },
-  { title:'PLC Factorial',             issuer:'Factorial  · 2026', img:'./assets/Images/' },
+  { title:'PLC Factorial',             issuer:'Factorial  · 2026', img:'./assets/Images/Factorial PLC.PNG' },
 ]
 
 function renderCertificates(){
@@ -457,29 +457,11 @@ const ytVideos = [
     year: 2026
   },
   {
-    id: '',          // ← তোমার YouTube video ID দাও
+    id: 'X5GQIKr1WqU',          // ← তোমার YouTube video ID দাও
     title: 'Electronics Project Showcase',
     label: 'ELECTRONICS',
     year: 2026
   },
-  /**{
-    id: '',          // ← তোমার YouTube video ID দাও
-    title: 'Brand Design Process',
-    label: 'DESIGN',
-    year: 2025
-  },
-  {
-    id: '',          // ← তোমার YouTube video ID দাও
-    title: 'PLC Automation Demo',
-    label: 'PLC',
-    year: 2024
-  },
-  {
-    id: '',          // ← তোমার YouTube video ID দাও
-    title: 'App Development Walkthrough',
-    label: 'APP DEV',
-    year: 2025
-  }*/
 ];
 
 function renderYTVideos() {
