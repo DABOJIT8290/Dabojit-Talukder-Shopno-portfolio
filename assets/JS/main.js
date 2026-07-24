@@ -263,10 +263,10 @@ const apps = [
     label: 'Mobile App',
     tag: 'Free',
     summary: 'A simple and efficient application to track your daily expenses and manage your budget effortlessly.',
-    cover: './assets/Images/icon.png',
+    cover: './assets/Images/App Icon.png',
     file: './assets/Apps/app-release.apk' 
   },
-  {
+  /*{
     title: 'Daily Routine',
     label: 'Mobile App',
     tag: 'Free',
@@ -282,7 +282,7 @@ const apps = [
   //   summary: 'Short description of the app.',
   //   cover: './assets/Images/another-icon.png',
   //   file: './assets/Apps/another-app.apk'
-  // },
+  // },*/
 ];
 
 function renderApps(){
